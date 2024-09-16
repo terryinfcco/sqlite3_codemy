@@ -4,7 +4,7 @@ import sqlite3
 # if you want to just have a db in memory that disappears after the program ends
 # conn = sqlite3.connect(':memory:')
 # if customer.db exists this will just connect to it rather than recreate it.
-conn = sqlite3.connect('customer.db')
+conn = sqlite3.connect("customer.db")
 
 # Tables inside database contains all the data in the database
 # row and columns like a spreadsheet
@@ -16,9 +16,10 @@ c = conn.cursor()
 c.execute("SELECT * FROM customers")
 # c.fetchone()    # fetches last item in table
 # c.fetchmany(3)  # fetches 3 items (from where?)
-all_customers = c.fetchall()    # fetches everything in the table
+all_customers = c.fetchall()  # fetches everything in the table
+# Returns a list of tuples
 
-print (all_customers)
+print(all_customers)
 
 # print("Command executed successfully...")
 
